@@ -1,0 +1,7 @@
+com\api\automation\tests\ProductTests.class
+com\api\automation\tests\UserTests.class
+com\api\automation\tests\CartTests.class
+com\api\automation\utils\ConfigReader.class
+com\api\automation\base\BaseTest.class
+com\api\automation\utils\TokenManager.class
+com\api\automation\tests\AuthTests.class

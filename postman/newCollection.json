@@ -1,0 +1,210 @@
+{
+  "info": {
+    "_postman_id": "e9eba76b-6c90-42ff-8fb7-369236db39b9",
+    "name": "TestCollection_01",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "4861404",
+    "_collection_link": "https://go.postman.co/collection/4861404-e9eba76b-6c90-42ff-8fb7-369236db39b9?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Auth token for login",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              "pm.environment.set(\"base_url\", \"https://dummyjson.com\");\r",
+              "pm.environment.set(\"username\", \"emilys\");\r",
+              "pm.environment.set(\"password\", \"emilyspass\");"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "let jsonData = pm.response.json();",
+              "",
+              "pm.environment.set(\"token\", jsonData.accessToken);",
+              "",
+              "console.log(pm.environment.get(\"token\"));"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \r\n    \"username\": \"{{username}}\",\r\n    \"password\": \"{{password}}\",\r\n    \"expiresInMins\": 30 // optional, defaults to 60\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/auth/login",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getUser",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/auth/me",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "auth",
+            "me"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getAllProducts",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/products",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getProduct",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/product/2",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "product",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getCart",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 201\", function () {\r",
+              "    pm.response.to.have.status(201);\r",
+              "});\r",
+              "pm.test(\"Content-Type is present\", function () {\r",
+              "    pm.response.to.have.header(\"content-type\", \"application/json; charset=utf-8\");\r",
+              "});\r",
+              "pm.test(\"Response time is less than 12s\", function () {\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(30000);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"userId\": 1,\r\n    \"products\": [\r\n        {\r\n            \"id\": 144,\r\n            \"quantity\": 4\r\n        },\r\n        {\r\n            \"id\": 98,\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/carts/add",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "carts",
+            "add"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
