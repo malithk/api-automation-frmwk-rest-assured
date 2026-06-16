@@ -66,5 +66,6 @@ Allure Report
 ```
 
 ---
+Kudos "https://dummyjson.com/"
 
 Built for API automation, reporting, and CI/CD execution using open-source technologies.
