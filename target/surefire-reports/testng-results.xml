@@ -2,50 +2,50 @@
 <testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-15T21:57:04 EDT" name="API Automation Suite" finished-at="2026-06-15T21:57:07 EDT" duration-ms="3099">
+  <suite started-at="2026-06-15T22:55:22 EDT" name="API Automation Suite" finished-at="2026-06-15T22:55:25 EDT" duration-ms="3012">
     <groups>
     </groups>
-    <test started-at="2026-06-15T21:57:04 EDT" name="API Regression Tests" finished-at="2026-06-15T21:57:07 EDT" duration-ms="3099">
+    <test started-at="2026-06-15T22:55:22 EDT" name="API Regression Tests" finished-at="2026-06-15T22:55:25 EDT" duration-ms="3012">
       <class name="com.api.automation.tests.ProductTests">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.api.automation.tests.ProductTests@2c767a52]" started-at="2026-06-15T21:57:06 EDT" name="setup" finished-at="2026-06-15T21:57:06 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.api.automation.tests.ProductTests@74e28667]" started-at="2026-06-15T22:55:24 EDT" name="setup" finished-at="2026-06-15T22:55:24 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="getAllProductsTest()[pri:0, instance:com.api.automation.tests.ProductTests@2c767a52]" started-at="2026-06-15T21:57:06 EDT" name="getAllProductsTest" finished-at="2026-06-15T21:57:06 EDT" duration-ms="124" status="PASS">
+        <test-method signature="getAllProductsTest()[pri:0, instance:com.api.automation.tests.ProductTests@74e28667]" started-at="2026-06-15T22:55:24 EDT" name="getAllProductsTest" finished-at="2026-06-15T22:55:24 EDT" duration-ms="115" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAllProductsTest -->
-        <test-method signature="getSingleProductTest()[pri:0, instance:com.api.automation.tests.ProductTests@2c767a52]" started-at="2026-06-15T21:57:06 EDT" name="getSingleProductTest" finished-at="2026-06-15T21:57:07 EDT" duration-ms="554" status="PASS">
+        <test-method signature="getSingleProductTest()[pri:0, instance:com.api.automation.tests.ProductTests@74e28667]" started-at="2026-06-15T22:55:24 EDT" name="getSingleProductTest" finished-at="2026-06-15T22:55:25 EDT" duration-ms="572" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getSingleProductTest -->
       </class> <!-- com.api.automation.tests.ProductTests -->
       <class name="com.api.automation.tests.CartTests">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.api.automation.tests.CartTests@619713e5]" started-at="2026-06-15T21:57:07 EDT" name="setup" finished-at="2026-06-15T21:57:07 EDT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="addCartTest()[pri:0, instance:com.api.automation.tests.CartTests@619713e5]" started-at="2026-06-15T21:57:07 EDT" name="addCartTest" finished-at="2026-06-15T21:57:07 EDT" duration-ms="247" status="PASS">
+        <test-method signature="addCartTest()[pri:0, instance:com.api.automation.tests.CartTests@1cf6d1be]" started-at="2026-06-15T22:55:25 EDT" name="addCartTest" finished-at="2026-06-15T22:55:25 EDT" duration-ms="192" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCartTest -->
-      </class> <!-- com.api.automation.tests.CartTests -->
-      <class name="com.api.automation.tests.UserTests">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.api.automation.tests.UserTests@130161f7]" started-at="2026-06-15T21:57:06 EDT" name="setup" finished-at="2026-06-15T21:57:06 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.api.automation.tests.CartTests@1cf6d1be]" started-at="2026-06-15T22:55:25 EDT" name="setup" finished-at="2026-06-15T22:55:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="getUserTest()[pri:0, instance:com.api.automation.tests.UserTests@130161f7]" started-at="2026-06-15T21:57:06 EDT" name="getUserTest" finished-at="2026-06-15T21:57:06 EDT" duration-ms="227" status="PASS">
+      </class> <!-- com.api.automation.tests.CartTests -->
+      <class name="com.api.automation.tests.UserTests">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.api.automation.tests.UserTests@7161d8d1]" started-at="2026-06-15T22:55:24 EDT" name="setup" finished-at="2026-06-15T22:55:24 EDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="getUserTest()[pri:0, instance:com.api.automation.tests.UserTests@7161d8d1]" started-at="2026-06-15T22:55:24 EDT" name="getUserTest" finished-at="2026-06-15T22:55:24 EDT" duration-ms="219" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getUserTest -->
       </class> <!-- com.api.automation.tests.UserTests -->
       <class name="com.api.automation.tests.AuthTests">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.api.automation.tests.AuthTests@3427b02d]" started-at="2026-06-15T21:57:04 EDT" name="setup" finished-at="2026-06-15T21:57:04 EDT" duration-ms="196" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.api.automation.tests.AuthTests@235ecd9f]" started-at="2026-06-15T22:55:22 EDT" name="setup" finished-at="2026-06-15T22:55:22 EDT" duration-ms="206" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginTokenTest()[pri:0, instance:com.api.automation.tests.AuthTests@3427b02d]" started-at="2026-06-15T21:57:04 EDT" name="loginTokenTest" finished-at="2026-06-15T21:57:06 EDT" duration-ms="1729" status="PASS">
+        <test-method signature="loginTokenTest()[pri:0, instance:com.api.automation.tests.AuthTests@235ecd9f]" started-at="2026-06-15T22:55:22 EDT" name="loginTokenTest" finished-at="2026-06-15T22:55:24 EDT" duration-ms="1626" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTokenTest -->
